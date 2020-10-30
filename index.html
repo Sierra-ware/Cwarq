@@ -1,96 +1,413 @@
-<h1 style="text-align: center;">
-    КИНО
-</h1>
-<div style="display: flex">
-	<div style="background-color: #beacd3; height: 500px; width: 280px; margin-left: 350px">
-		<img style="width: 280" src="https://i.imgur.com/TAOTL2j.jpeg"; style="width: 270px">
-		<h1 style="font-size: 17px">
-			Мстители: Финал
-		</h1>
-		<p>
-	   		Апрель, 2019
-		</p>
-	</div>
-	<div style="background-color: #ca2337; height: 500px; width: 280px; margin-left: 10px">
-		<img style="width: 280px" src="https://i.imgur.com/kJJZKMp.jpeg"; style="width: 270px">
-		<h1 style="font-size: 17px">
-			Человек-Паук: Вдали от дома
-		</h1>
-		<p>
-	   		Июнь, 2019
-		</p>
-	</div>
-	<div style="background-color: #7b0d03; height: 500px; width: 280px; margin-left: 10px">
-		<img style="width: 280px" src="https://i.imgur.com/DDhiyHK.jpeg"; style="width: 270px">
-		<h1 style=" font-size: 17px">
-			Капитан Марвел
-		</h1>
-		<p>
-	   		Март, 2019
-		</p>
-	</div>
-	<div style="background-color: #dd4645; height: 500px; width: 280px; margin-left: 10px">
-		<img style="width: 280px" src="https://i.imgur.com/ssZsY2G.jpeg"; style="width: 270px">
-		<h1 style=" font-size: 17px">
-			Человек-Муравей и Оса
-		</h1>
-		<p>
-	   		Июнь, 2018
-		</p>
-	</div>
-</div>
+<style>
+	/*вот так ставятся комментарии внутри style*/
 
+	/* ВСЯ ШАПКА */
+	.header {
+		background-color: gray;
+		height: 100px;
+		font-family: arial;
+	}
+	/* ЦЕНТРАЛЬНЫЙ ГЛАВНЫЙ ДИВ */
+	.charts-container {
+		width: 1000px;
+		height: 2000px;
+		background-color:white;
+		margin-left: auto;
+		margin-right: auto;
+		font-family: arial;
 
-<h1 style="text-align: center;font-style: italic;">
-	ИГРЫ
-</h1>
-<div style="margin-top: 50px;display: flex; ">
-	<div style="background-color: brown; height: 370px;width: 280px;margin-left: 350px">
-		<img style="width: 280px" src= "https://i.imgur.com/iZq6G6p.jpg">
-		<p>
-    		<h3>
-    			Marvel future fight
-    		</h3>
-		</p>
-		<p>
-    		Мобильные
-		</p>
-	</div>
+	}
 
-	<div style="background-color: purple; height: 370px;width: 280px;margin-left: 10px">
-		<img style="width: 280px" src= "https://i.imgur.com/Yeggm0Z.jpg">
-		<p>
-    		<h5>
-    			MARVEL <<Стражи Галактики: The Teltale series>>
-    		</h5>
-		</p>
-		<p>
-    		Мобильные
-		</p>
-	</div>
+	.img-logo {
+		padding-top: 20px;
+		width: 220px;
 
-	<div style="background-color: cyan; height: 370px;width: 280px;margin-left: 10px">
-		<img style="width: 280px" src= "https://i.imgur.com/r0wbyhf.jpg">
-		<p>
-    		<h3>
-    			MARVEL Avengers Academy
-    		</h3>
-		</p>
-		<p>
-    		Мобильные
-		</p>
-	</div>
+	}
 
-	<div style="background-color: red; height: 370px;width: 280px;margin-left: 10px">
+	/* ДИВ, КОТОРЫЙ СОДЕРЖИТ ДИВЫ ДЛЯ ЛОГОТИПА, ССЫЛОК И КНОПКИ */
+	.header-center {
+		height: 95px;
+		background-color: gray;
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+	}
+	/* ДИВ ДЛЯ ЧЕТЫРЕХ КНОПОК СОРТИРОВКИ */
+	.charts-sort {
+		background-color:white ;
+		height: 100px;
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
 		
-		<img style="width: 280px" src= "https://i.imgur.com/4OUgqM3.jpeg">
-		<p>
-    		<h3>Совершенный Человек-Паук</h3>
-		</p>
-		<p>
-    		Мобильные
-		</p>
+	}
+	/* ДИВ ДЛЯ ПЕСНИ, КОТОРАЯ ПОДНЯЛАСЬ В РЕЙТИНГЕ ПЕСЕН */
+	.charts-up {
+		height: 200px;
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: C5EDD1;
+		border-radius: 10px;
+		margin-top: 10px;
+		display: flex;
+	}
+	/* ДИВ ДЛЯ НОВОЙ ПЕСНИ, КОТОРАЯ ПОПАЛА В РЕЙТИНГ ПЕСЕН */
+	.charts-new {
+		height: 200px;
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: FFE7BA;
+		border-radius: 10px;
+		margin-top: 10px;
+		display: flex;
+	}
+	/* ДИВ ДЛЯ ПЕСНИ, КОТОРАЯ ОПУСТИЛАСЬ В РЕЙТИНГЕ ПЕСЕН */
+	.charts-down {
+		height: 200px;
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: EDC2C2;
+		border-radius: 10px;
+		margin-top: 10px;
+		display: flex;
+	}
+	/* ДИВ ДЛЯ ЛОГОТИПА САЙТА*/
+	.box-logo {
+		height: 95px;
+		width: 200px;
+		
+		 
+	}
+	/* ДИВ ДЛЯ ЧЕТЫРЕХ ССЫЛОК САЙТА*/
+	.box-links {
+		height: 65px;
+		width: 650px;
+		padding-top: 30px;
+		 
+	}
+	/* ДИВ ДЛЯ КНОПКИ "SUBSCRIBE" */
+	.box-buttons {
+		height: 95px;
+		width: 150px;
+		
+		 
+	}
+	/* ДИВ ДЛЯ НОМЕРА И СТАТУСА ПЕСНИ В РЕЙТИНГЕ */
+	.charts-rank {
+		width: 120px;
+		height: 160px;
+		text-align: center;
+		padding-top: 40px;	
+	}
+	/* ДИВ ДЛЯ НАЗВАНИЯ И ИСПОЛНИТЕЛЯ ПЕСНИ */
+	.charts-info {
+		width: 550px;
+		height: 180px;
+		padding-top: 20px;
+		font-weight: 700;
+		font-size: 25px
+	}
+	/* ДИВ ДЛЯ КНОПОК ПЕСНИ */
+	.charts-button {
+		width: 180px;
+		height: 180px;
+		padding-top: 20px;
+		
+	}
+	/* ДИВ ДЛЯ КАРТИНКИ ПЕСНИ ИЛИ АЛЬБОМА */
+	.charts-img {
+		width: 150px;
+		height: 200px;
+		
+		
+	}
+	/* ЧЕТЫРЕ ССЫЛКИ В ШАПКЕ */
+	.links-header {
+		margin-left: 50px;
+		color: white;
+	}
+	/* ФИОЛЕТОВАЯ КНОПКА */
+	.button-purple {
+		background-color: purple;
+		color: white;
+		margin-top: 20px;
+		width: 150px;
+		height: 40px;
+		border: none;
+		border-radius: 5px;
+	}
+	/* СИНЯЯ КНОПКА */
+	.button-blue {
+		background-color: blue;
+		color: white;
+		margin-top: 20px;
+		width: 160px;
+		height: 40px;
+		border: none;
+		border-radius: 5px;
+	}
+	/* ЗЕЛЕНАЯ КНОПКА */
+	.button-green {
+		background-color:green;
+		margin-top: 20px;
+		width: 150px;
+		height: 40px;
+		border-radius: 5px;
+		border-color: white;
+		border-width: 0px;
+		color: white;
+	}
 
+	/* КРАСНАЯ КНОПКА */
+	.button-red {
+		background-color: red;
+		color: white;
+		margin-top: 20px;
+		width: 150px;
+		height: 40px;
+		border: none;
+		border-radius: 5px;
+	}
+
+	.button-orange {
+		background-color: orange;
+		color: white;
+		margin-top: 20px;
+		width: 150px;
+		height: 40px;
+		border: none;
+		border-radius: 5px;
+	}
+
+	/* ТЕКСТ СТАТУСА ПЕСНИ, КОТОРАЯ ПОДНЯЛАСЬ В РЕЙТИНГЕ */
+	.charts-rank-text-up {
+		font-weight: 700;
+		color: green;
+	}
+	/* ТЕКСТ СТАТУСА ПЕСНИ, КОТОРАЯ НЕДАВНО ПОПАЛА В РЕЙТИНГ */
+	.charts-rank-text-new {
+		font-weight: 700;
+		color: orange;
+	}
+	/* ТЕКСТ СТАТУСА ПЕСНИ, КОТОРАЯ ОПУСТИЛАСЬ В РЕЙТИНГЕ */
+	.charts-rank-text-down {
+		font-weight: 700;
+		color: red;
+	}
+	/* НАЗВАНИЕ ПЕСНИ */
+	.charts-info-songname {
+		color: blue;
+	}
+	/* НАЗВАНИЕ ИСПОЛНИТЕЛЯ */
+	.charts-info-artistname {
+		color: gray;
+	}
+	/* КАРТИНКА ДЛЯ ПЕСНИ */
+	.charts-img-size {
+		width: 150px;
+		margin-top: 25px;
+		margin-right: 4px
+	}
+</style>
+
+<!-- 1 уровень. шапка -->
+<div class="header">
+	<!-- 2 уровень. выравнивание шапки -->
+	<div class="header-center">
+		<!-- 3 уровень -->
+		<!-- лого -->
+		<div class="box-logo">
+			<img class="img-logo" src="https://www.pngkit.com/png/full/234-2341310_billboard-logo-png-clip-black-and-white-2018.png">
+		</div>
+		<!-- ссылки -->
+		<div class="box-links">
+			<a class="links-header" href="">CHARTS</a>
+			<a class="links-header" href="">NEWS</a>
+			<a class="links-header" style="color: red" href="">VIDEO</a>
+			<a class="links-header" style="color: orange" href="">PHOTOS</a>
+		</div>
+		<!-- кнопка подписаться -->
+		<div class="box-buttons">
+			<button class="button-purple">subscribe</button>
+		</div>
+	</div>
+</div>
+
+<!-- 1 уровень. чарт-контейнер -->
+<div class="charts-container">
+	<!-- 2 уровень -->
+	<!-- для кнопок сортировки -->
+	<div class="charts-sort">
+		<button class="button-orange">THIS WEEK</button>
+		<button class="button-red">LAST WEEK</button>
+		<button class="button-green">PEAK</button>
+		<button class="button-purple">DURATION</button>
+	</div>
+	<!--все треки в чарте -->
+
+	<!-- трек up -->
+	<div class="charts-up">
+		<!-- 3 уровень -->
+		<!-- Место в чате -->
+		<div class="charts-rank">
+			<h1>1</h1>
+			<p class="charts-rank-text-up">Up</p>
+		</div>
+		<!-- информация о треке -->
+		<div class="charts-info">
+			<p class="charts-info-songname">Down with the sickness/Stupify</p>
+			<p class="charts-info-artistname">Disturbed</p>
+		</div>
+		<!-- купить или воспроизвести -->
+		<div class="charts-button">
+			<button class="button-blue">Воспроизвести</button>
+		</div>
+		<!-- картинка -->
+		<div class="charts-img">
+			<img class="charts-img-size" src="https://upload.wikimedia.org/wikipedia/en/a/a2/TheSickness.jpg">
+		</div>
 	</div>
 
+	<!-- трек new -->
+	<div class="charts-new">
+		<!-- 3 уровень -->
+		<!-- Место в чате -->
+		<div class="charts-rank">
+			<h1>2</h1>
+			<p class="charts-rank-text-new">New</p>
+		</div>
+		<!-- информация о треке -->
+		<div class="charts-info">
+			<p class="charts-info-songname">Lying from you</p>
+			<p class="charts-info-artistname">Linkin park</p>
+		</div>
+		<!-- купить или воспроизвести -->
+		<div class="charts-button">
+			<button class="button-green">Купить</button>
+		</div>
+		<!-- картинка -->
+		<div class="charts-img">
+			<img class="charts-img-size" src="https://upload.wikimedia.org/wikipedia/en/0/0c/Linkin_Park_Meteora_Album_Cover.jpg">
+		</div>
+	</div>
+
+	<!-- трек new -->
+	<div class="charts-new">
+		<!-- 3 уровень -->
+		<!-- Место в чате -->
+		<div class="charts-rank">
+			<h1>3</h1>
+			<p class="charts-rank-text-new">New</p>
+		</div>
+		<!-- информация о треке -->
+		<div class="charts-info">
+			<p class="charts-info-songname">Break stuff</p>
+			<p class="charts-info-artistname">Limp Bizkit</p>
+		</div>
+		<!-- купить или воспроизвести -->
+		<div class="charts-button">
+			<button class="button-green">Купить</button>
+		</div>
+		<!-- картинка -->
+		<div class="charts-img">
+			<img src="https://images-na.ssl-images-amazon.com/images/I/81GTu6740XL._SL1400_.jpg" class="charts-img-size">
+		</div>
+	</div>
+
+	<!-- трек up -->
+	<div class="charts-up">
+		<!-- 3 уровень -->
+		<!-- Место в чате -->
+		<div class="charts-rank">
+			<h1>4</h1>
+			<p class="charts-rank-text-up">Up</p>
+		</div>
+		<!-- информация о треке -->
+		<div class="charts-info">
+			<p class="charts-info-songname">Enter sandman</p>
+			<p class="charts-info-artistname">Metallica</p>
+		</div>
+		<!-- купить или воспроизвести -->
+		<div class="charts-button">
+			<button class="button-green">Купить</button>
+		</div>
+		<!-- картинка -->
+		<div class="charts-img">
+			<img class="charts-img-size" src="https://cdns-images.dzcdn.net/images/cover/f1c31620f0e108b707ce1a1af0954158/350x350.jpg">
+		</div>
+	</div>
+
+	<!-- трек down -->
+	<div class="charts-down">
+		<!-- 3 уровень -->
+		<!-- Место в чате -->
+		<div class="charts-rank">
+			<h1>5</h1>
+			<p class="charts-rank-text-down">Down</p>
+		</div>
+		<!-- информация о треке -->
+		<div class="charts-info">
+			<p class="charts-info-songname">Points of authority/Place for my head</p>
+			<p class="charts-info-artistname">Linkin park</p>
+		</div>
+		<!-- купить или воспроизвести -->
+		<div class="charts-button">
+			<button class="button-green">Купить</button>
+		</div>
+		<!-- картинка -->
+		<div class="charts-img">
+			<img class="charts-img-size" src="https://upload.wikimedia.org/wikipedia/en/2/2a/Linkin_Park_Hybrid_Theory_Album_Cover.jpg">
+		</div>
+	</div>
+
+	<!-- трек new -->
+	<div class="charts-new">
+		<!-- 3 уровень -->
+		<!-- Место в чате -->
+		<div class="charts-rank">
+			<h1>6</h1>
+			<p class="charts-rank-text-new">New</p>
+		</div>
+		<!-- информация о треке -->
+		<div class="charts-info">
+			<p class="charts-info-songname">Happy?</p>
+			<p class="charts-info-artistname">Mudvayne</p>
+		</div>
+		<!-- купить или воспроизвести -->
+		<div class="charts-button">
+			<button class="button-blue">Воспроизвести</button>
+		</div>
+		<!-- картинка -->
+		<div class="charts-img">
+			<img class="charts-img-size" src="https://images-na.ssl-images-amazon.com/images/I/81MIx8REpaL._SL1500_.jpg">
+		</div>
+	</div>
+
+	<!-- трек up -->
+	<div class="charts-up">
+		<!-- 3 уровень -->
+		<!-- Место в чате -->
+		<div class="charts-rank">
+			<h1>7</h1>
+			<p class="charts-rank-text-up">New</p>
+		</div>
+		<!-- информация о треке -->
+		<div class="charts-info">
+			<p class="charts-info-songname">Toxicity/Chop suey</p>
+			<p class="charts-info-artistname">System of a down</p>
+		</div>
+		<!-- купить или воспроизвести -->
+		<div class="charts-button">
+			<button class="button-blue">Воспроизвести</button>
+		</div>
+		<!-- картинка -->
+		<div class="charts-img">
+			<img class="charts-img-size" src="https://upload.wikimedia.org/wikipedia/en/6/64/SystemofaDownToxicityalbumcover.jpg">
+		</div>
+	</div>
 </div>
+<!--  -->
