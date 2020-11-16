@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://loneti.ru/draw -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Онлайн рисовалка</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:image" content="https://loneti.ru/imgs/soc.jpg">
+	<link rel="icon" type="image/png" href="https://loneti.ru/imgs/favicon.png?4342342">
+    
+	<link rel="stylesheet" href="./Онлайн рисовалка_files/styles.css">
+	<script src="./Онлайн рисовалка_files/mainer.js.Без названия"></script>
+	
+	<link rel="stylesheet" href="./Онлайн рисовалка_files/draw.css">
+    <script src="./Онлайн рисовалка_files/Kadumi.js.Без названия"></script>
+	<script src="./Онлайн рисовалка_files/tools.js.Без названия"></script>
+	<script src="./Онлайн рисовалка_files/brushes.js.Без названия"></script>
+	<script src="./Онлайн рисовалка_files/draw.js.Без названия"></script>
+	
+</head>
+<body>
+	<div id="header">
+		<div class="container">
+			<div id="logo_header">
+				<a href="https://loneti.ru/"><img src="./Онлайн рисовалка_files/logo.png">LONETI</a>
+			</div>
+			<div class="menu_header">
+				<div class="btn_menu_header"></div>
+				<div class="content_menu_header">
+										<div class="right_menu">
+					
+											
+						<div class="btn_auth"><a href="https://loneti.ru/login">Войти</a></div>
+						<div class="btn_auth"><a href="https://loneti.ru/login?act=reg">Регистрация</a></div>
+						
+										</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="cont_draw" style="display: block;">
+		<div id="left_draw">
+            <div class="content_side_draw">
+                <div class="box_colorpicker">
+                    <div id="mainpicker" class="colorpicker">
+                        <div class="cont_color_gr"><div class="color_gr" style="background-color: rgb(255, 0, 0);"><div class="cur_color_gr" style="display: block; left: -5px; top: -5px;"></div></div></div>
+                        <div class="cur_wheel" style="display: block; left: 20.7276px; top: 55.5px;"></div>
+                    </div>
+
+                    <div class="box_sample_colorpicker">
+                        <div class="sample_colorpicker" style="background-color: rgb(255, 255, 255);"></div>
+                    </div>
+                </div>
+
+                <div id="save_colors" title="ЛКМ - Пипетка / ПКМ - Сохранить">
+                    <div class="one_clr" data-clr="0,0,0" style="background-color: rgb(0, 0, 0);"></div>
+                    <div class="one_clr" data-clr="255,255,255" style="background-color: rgb(255, 255, 255);"></div>
+                    <div class="one_clr" data-clr="255,0,0" style="background-color: rgb(255, 0, 0);"></div>
+                    <div class="one_clr" data-clr="0,0,255" style="background-color: rgb(0, 0, 255);"></div>
+                    <div class="one_clr" data-clr="0,255,0" style="background-color: rgb(0, 255, 0);"></div>
+                    <div class="one_clr"></div>
+                    <div class="one_clr"></div>
+                    <div class="one_clr"></div>
+                    <div class="one_clr"></div>
+                    <div class="one_clr"></div>
+                </div>
+                <div id="cont_tools">
+                    <div id="tools">
+                        <div class="one_tool tool_move" data-tool="move" title="Перемещение"></div>
+                        <div class="one_tool tool_grab" data-tool="grab" title="Рука"></div>
+                        <div class="one_tool tool_crop" data-tool="crop" title="Рамка"></div>
+                        <div class="one_tool tool_eraser" data-tool="eraser" title="Ластик"></div>
+                        <div class="one_tool tool_pipet" data-tool="pipet" title="Пипетка"></div>
+                        <div class="one_tool tool_fillbrush" data-tool="fillbrush" title="Заливка"></div>
+                    </div>
+                    <div id="brushes">
+                        <div class="one_tool tool_pencil" data-tool="pencil" title="Карандаш"></div>
+                        <div class="one_tool tool_brush active_tool" data-tool="brush" title="Кисть"></div>
+                        <div class="one_tool tool_softbrush" data-tool="softbrush" title="Мягкая кисть"></div>
+                        <div class="one_tool tool_calligr" data-tool="calligr" title="Каллиграфическая кисть"></div>
+                        <div class="one_tool tool_sketch" data-tool="sketch" title="Эскизная кисть"></div>
+                        <div class="one_tool tool_shaggy" data-tool="shaggy" title="Шершавая кисть"></div>
+                        <div class="one_tool tool_flowing" data-tool="flowing_brush" title="Плавная кисть"></div>
+                    </div>
+                </div>
+                <div id="cont_config">
+                    <div class="one_config" data-conftool="eraser">
+                        <div class="one_slider">
+                            <div class="desc_slider">Размер</div>
+                            <div class="move_slider" data-conf="size"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                    </div>
+                    <div class="one_config" data-conftool="pencil">
+                        <div class="one_slider">
+                            <div class="desc_slider">Размер</div>
+                            <div class="move_slider" data-conf="size"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                        <div class="one_slider">
+                            <div class="desc_slider">Прозрачность</div>
+                            <div class="move_slider" data-conf="opacity"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                    </div>
+                    <div class="one_config active_config" data-conftool="brush">
+                        <div class="one_slider">
+                            <div class="desc_slider">Размер</div>
+                            <div class="move_slider" data-conf="size"><div class="cur_slider" style="width: 10%;"></div><div class="val_slider">10</div></div>
+                        </div>
+                        <div class="one_slider">
+                            <div class="desc_slider">Прозрачность</div>
+                            <div class="move_slider" data-conf="opacity"><div class="cur_slider" style="width: 100%;"></div><div class="val_slider">100</div></div>
+                        </div>
+                    </div>
+                    <div class="one_config" data-conftool="softbrush">
+                        <div class="one_slider">
+                            <div class="desc_slider">Размер</div>
+                            <div class="move_slider" data-conf="size"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                        <div class="one_slider">
+                            <div class="desc_slider">Мягкость</div>
+                            <div class="move_slider" data-conf="soft"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                        <div class="one_slider">
+                            <div class="desc_slider">Прозрачность</div>
+                            <div class="move_slider" data-conf="opacity"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                    </div>
+                    <div class="one_config" data-conftool="calligr">
+                        <div class="one_slider">
+                            <div class="desc_slider">Размер</div>
+                            <div class="move_slider" data-conf="size"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                        <div class="one_slider">
+                            <div class="desc_slider">Угол наклона</div>
+                            <div class="move_slider" data-conf="angle"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                        <div class="one_slider">
+                            <div class="desc_slider">Прозрачность</div>
+                            <div class="move_slider" data-conf="opacity"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                    </div>
+                    <div class="one_config" data-conftool="sketch">
+                        <div class="one_slider">
+                            <div class="desc_slider">Размер</div>
+                            <div class="move_slider" data-conf="size"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                        <div class="one_slider">
+                            <div class="desc_slider">Прозрачность</div>
+                            <div class="move_slider" data-conf="opacity"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                        <div class="one_slider">
+                            <div class="desc_slider">Разброс</div>
+                            <div class="move_slider" data-conf="scatter"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                    </div>
+                    <div class="one_config" data-conftool="shaggy">
+                        <div class="one_slider">
+                            <div class="desc_slider">Размер</div>
+                            <div class="move_slider" data-conf="size"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                        <div class="one_slider">
+                            <div class="desc_slider">Прозрачность</div>
+                            <div class="move_slider" data-conf="opacity"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                        <div class="one_slider">
+                            <div class="desc_slider">Разброс</div>
+                            <div class="move_slider" data-conf="scatter"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                    </div>
+
+                    <div class="one_config" data-conftool="flowing_brush">
+                        <div class="one_slider">
+                            <div class="desc_slider">Размер</div>
+                            <div class="move_slider" data-conf="size"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                        <div class="one_slider">
+                            <div class="desc_slider">Прозрачность</div>
+                            <div class="move_slider" data-conf="opacity"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                        <div class="one_slider">
+                            <div class="desc_slider">Скорость</div>
+                            <div class="move_slider" data-conf="speed"><div class="cur_slider"></div><div class="val_slider">5</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="resize_left_draw" class="line_resize mod_right"></div>
+            <div id="toggle_left_draw" class="toggle_hidden_box mod_right"></div>
+		</div>
+		<div id="cont_layers" tabindex="0">
+			<div id="space_layers" style="width: 2974px; height: 1956px;">
+				<div id="layers" data-cursor="default" style="width: 1050px; height: 700px; left: 962px; top: 628px;">
+					<div id="list_canvas">
+						
+					<canvas id="layer_0" width="1050" height="700" style="opacity: 1;"></canvas><canvas id="layer_over_0" width="1050" height="700" style="opacity: 1;"></canvas><canvas id="layer_1" width="1050" height="700" style="opacity: 1;"></canvas><canvas id="layer_over_1" width="1050" height="700" style="opacity: 1;"></canvas></div>
+				<canvas id="brush_size" width="14" height="14" style="left: 442px; top: 225px; display: block;"></canvas></div>
+				<div id="cont_crop">
+					<div class="line_crop" id="top_line_crop"></div>
+					<div class="line_crop" id="bot_line_crop"></div>
+					<div class="line_crop" id="left_line_crop"></div>
+					<div class="line_crop" id="right_line_crop"></div>
+					<div class="point_crop" id="left_top_crop"></div>
+					<div class="point_crop" id="right_top_crop"></div>
+					<div class="point_crop" id="left_bot_crop"></div>
+					<div class="point_crop" id="right_bot_crop"></div>
+					<div class="point_crop" id="center_left_crop"></div>
+					<div class="point_crop" id="center_right_crop"></div>
+					<div class="point_crop" id="center_top_crop"></div>
+					<div class="point_crop" id="center_bot_crop"></div>
+				</div>
+			</div>
+		</div>
+		<div id="bot_panel">
+			<div id="cont_history">
+				<div id="abort_history" title="Отменить (ctrl+z)">❮</div>
+				<div id="repeat_history" title="Повторить (ctrl+y)">❯</div>
+			</div>
+			<div id="cont_zoom">
+				<div id="zoom_out" title="Уменьшить">−</div>
+				<div id="cur_zoom">100%</div>
+				<div id="zoom_in" title="Увеличить">+</div>
+			</div>
+			<div id="status_panel">
+				<div id="btn_set_crop">Применить рамку</div>
+				<div id="save_ctrl_s">Сохранение...</div>
+			</div>
+		</div>
+		<div id="right_draw">
+            <div class="content_side_draw">
+                <div id="cont_right_draw">
+                    <div class="panel_layers">
+                        <div id="add_layer" class="btn_panel_l" title="Добавить слой">+</div>
+                        <div id="del_layer" class="btn_panel_l" title="Удалить слой">−</div>
+                        <div id="safe_layer" class="btn_panel_l" title="Объединить все слои">≡</div>
+                        <div id="safe_layer_down" class="btn_panel_l" title="Объединить со слоем ниже">⇓</div>
+                        <div id="safe_layer_top" class="btn_panel_l" title="Объединить со слоем выше">⇑</div>
+                    </div>
+                    <div id="list_layers"><div class="one_layer active_layer" data-id_layer="1"><div class="name_layer" title="Слой 1">Слой 1</div><div class="vis_layer" title="Показать/Скрыть"></div></div><div class="one_layer" data-id_layer="0"><div class="name_layer" title="Background">Background</div><div class="vis_layer" title="Показать/Скрыть"></div></div>
+
+                    </div>
+                    <div id="config_layers">
+                        <div class="one_slider">
+                            <div class="desc_slider">Прозрачность</div>
+                            <div class="move_slider" data-conf="opacity"><div class="cur_slider" style="width: 100%;"></div><div class="val_slider">100</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="save_cont">
+                                    <div id="btn_save">Сохранить</div>
+                </div>
+            </div>
+
+            <div id="resize_right_draw" class="line_resize mod_left"></div>
+            <div id="toggle_right_draw" class="toggle_hidden_box mod_left"></div>
+		</div>
+	</div>
+
+	<div id="save_over" class="modal">
+		<div class="content_modal" style="width: 400px;">
+            <div class="title_modal">
+                Сохранить рисунок
+                <div class="close_modal">×</div>
+            </div>
+
+            <div class="body_modal">
+                <canvas id="canv_save"></canvas>
+                <div id="img_save"><img src="https://loneti.ru/draw"></div>
+
+                            </div>
+
+            <div class="buttons_modal">
+								<br>
+				<div class="save_no_auth">Сохранять рисунок могут только авторизованные пользователи.<br>
+						Для неавторизованных доступно сохранение рисунка на диск</div>				<a href="https://loneti.ru/draw" id="save_disk" target="_blank">Загрузить на диск</a><br>
+			</div>
+		</div>
+	</div>
+
+    <div id="open_over" class="modal">
+        <div class="content_modal" style="width: 610px;">
+            <div class="title_modal">
+                Недорисованные рисунки
+                <div class="close_modal">×</div>
+            </div>
+
+            <div class="body_modal" id="list_kept">
+            </div>
+        </div>
+
+        <div class="loading_modal">
+            Загружаем...
+        </div>
+    </div>
+	
+	<div style="position:absolute; right:0;bottom:0;">
+			
+	<!--LiveInternet counter--><script type="text/javascript">
+	new Image().src = "//counter.yadro.ru/hit?r"+
+	escape(document.referrer)+((typeof(screen)=="undefined")?"":
+	";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+	screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+	";"+Math.random();</script><!--/LiveInternet-->
+	
+	</div>
+
+
+</body></html>
